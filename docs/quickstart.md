@@ -13,5 +13,5 @@ pip install -U autora["experimentalist-model-disagreement-sampler"]
 
 Check your installation by running:
 ```shell
-python -c "from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler"
+python -c "from autora.experimentalist.sampler.model_disagreement_sampler import model_disagreement_sampler"
 ```

@@ -1,4 +1,4 @@
-from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler
+from autora.experimentalist.sampler.model_disagreement_sampler import model_disagreement_sampler
 from autora.theorist.bms import BMSRegressor; BMSRegressor()
 from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
 import numpy as np
