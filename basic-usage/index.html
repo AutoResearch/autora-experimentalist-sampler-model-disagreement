@@ -1443,7 +1443,6 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[1], line 3</span>
 
 <span class="c1">#Define ground truth model</span>
 <span class="k">def</span> <span class="nf">ground_truth</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
-    <span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">))</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span> <span class="o">**</span> <span class="mf">2.0</span><span class="p">)</span>
     <span class="n">y</span><span class="p">[</span><span class="n">xs</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="n">y</span>
@@ -1453,7 +1452,6 @@ X = np.linspace(start=-3, stop=6, num=10).reshape(-1, 1)
 
 #Define ground truth model
 def ground_truth(xs):
-    noise = np.random.rand(len(xs))
     y = (xs ** 2.0)
     y[xs < 0] = 0
     return y</div>
