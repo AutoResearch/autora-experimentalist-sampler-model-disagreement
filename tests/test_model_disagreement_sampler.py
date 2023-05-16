@@ -1,6 +1,6 @@
 from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler
-from autora.skl.bms import BMSRegressor
-from autora.skl.darts import DARTSRegressor
+from autora.theorist.bms import BMSRegressor; BMSRegressor()
+from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
 import numpy as np
 
 def test_output_dimensions():
