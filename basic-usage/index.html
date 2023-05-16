@@ -1333,13 +1333,13 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1356,22 +1356,52 @@ Licensed under the Apache License, Version 2.0.
             </div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">autora.skl.bms</span> <span class="kn">import</span> <span class="n">BMSRegressor</span>
-<span class="kn">from</span> <span class="nn">autora.skl.bsr</span> <span class="kn">import</span> <span class="n">BSRRegressor</span>
-<span class="kn">from</span> <span class="nn">autora.skl.darts</span> <span class="kn">import</span> <span class="n">DARTSRegressor</span>
+<span class="kn">from</span> <span class="nn">autora.theorist.bms</span> <span class="kn">import</span> <span class="n">BMSRegressor</span><span class="p">;</span> <span class="n">BMSRegressor</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">autora.theorist.bsr</span> <span class="kn">import</span> <span class="n">BSRRegressor</span><span class="p">;</span> <span class="n">BSRRegressor</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">autora.theorist.darts</span> <span class="kn">import</span> <span class="n">DARTSRegressor</span><span class="p">;</span> <span class="n">DARTSRegressor</span><span class="p">()</span>
 <span class="kn">from</span> <span class="nn">autora.experimentalist.sampler.model_disagreement</span> <span class="kn">import</span> <span class="n">model_disagreement_sampler</span>
 </pre></div>
 <div id="cell-1" class="clipboard-copy-txt">import numpy as np
 import matplotlib.pyplot as plt
-from autora.skl.bms import BMSRegressor
-from autora.skl.bsr import BSRRegressor
-from autora.skl.darts import DARTSRegressor
+from autora.theorist.bms import BMSRegressor; BMSRegressor()
+from autora.theorist.bsr import BSRRegressor; BSRRegressor()
+from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
 from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler</div>
         
         </div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ImportError</span>                               Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[1], line 3</span>
+<span class="ansi-green-fg">      1</span> import numpy as np
+<span class="ansi-green-fg">      2</span> import matplotlib.pyplot as plt
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span> from autora.theorist.bms import BMSRegressor; BMSRegressor()
+<span class="ansi-green-fg">      4</span> from autora.theorist.bsr import BSRRegressor; BSRRegressor()
+<span class="ansi-green-fg">      5</span> from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
+
+<span class="ansi-red-intense-fg ansi-bold">ImportError</span>: cannot import name &#39;BMSRegressor&#39; from &#39;autora.theorist.bms&#39; (C:\Users\cwill\GitHub\autora\autora\theorist\bms\__init__.py)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
