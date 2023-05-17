@@ -1,4 +1,4 @@
-# Model Disagreement Sampler
+# AutoRA Model Disagreement Sampler
 
 The model disagreement sampler identifies experimental conditions $\vec{x}' \in X'$ with respect to
 a pairwise distance metric between theorist models, $P_{M_{i}}(\hat{y}, \vec{x}')$:
