@@ -22,7 +22,7 @@ dev = [
 
 [project.urls]
 homepage = "http://www.empiricalresearch.ai"
-repository = "<Repository URL>"
+repository = "https://github.com/AutoResearch/autora-experimentalist-sampler-model-disagreement-sampler.git"
 documentation = "https://autoresearch.github.io/autora/"
 
 
