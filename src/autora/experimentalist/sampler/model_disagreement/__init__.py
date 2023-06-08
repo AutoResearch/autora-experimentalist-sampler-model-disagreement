@@ -2,7 +2,9 @@ import itertools
 from typing import Iterable, List
 import numpy as np
 
-def model_disagreement_sampler(X: np.array, models: List, num_samples: int = 1):
+from autora.utils.deprecation import deprecated_alias
+
+def model_disagreement_sample(X: np.array, models: List, num_samples: int = 1):
     """
     A sampler that returns selected samples for independent variables
     for which the models disagree the most in terms of their predictions.
@@ -62,3 +64,5 @@ def model_disagreement_sampler(X: np.array, models: List, num_samples: int = 1):
     idx = (-summed_disagreement).argsort()[:num_samples]
 
     return X[idx]
+
+model_disagreement_sampler = deprecated_alias(model_disagreement_sample, "model_disagreement_sampler")
