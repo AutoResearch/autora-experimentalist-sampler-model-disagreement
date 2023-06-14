@@ -1,4 +1,4 @@
-from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler
+from autora.experimentalist.sampler.model_disagreement import model_disagreement_sample
 from autora.theorist.bms import BMSRegressor; BMSRegressor()
 from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
 import numpy as np
@@ -17,7 +17,7 @@ def test_output_dimensions():
     darts_theorist.fit(X,y)
 
     #Sampler
-    X_new = model_disagreement_sampler(X, [bms_theorist, darts_theorist], n)
+    X_new = model_disagreement_sample(X, [bms_theorist, darts_theorist], n)
 
     # Check that the sampler returns n experiment conditions
     assert X_new.shape == (n, X.shape[1])
