@@ -7,11 +7,11 @@ You will need:
 *Model Disagreement Sampler* is a part of the `autora` package:
 
 ```shell
-pip install -U autora["experimentalist-model-disagreement"]
+pip install -U autora["experimentalist-sampler-model-disagreement"]
 ```
 
 
 Check your installation by running:
 ```shell
-python -c "from autora.experimentalist.sampler.model_disagreement import model_disagreement_sampler"
+python -c "from autora.experimentalist.sampler.model_disagreement import model_disagreement_sample"
 ```
