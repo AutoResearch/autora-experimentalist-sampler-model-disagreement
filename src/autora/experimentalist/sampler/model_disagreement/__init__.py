@@ -4,7 +4,7 @@ import numpy as np
 
 from autora.utils.deprecation import deprecated_alias
 
-def model_disagreement_sample(X: np.array, models: List, num_samples: int = 1):
+def model_disagreement_sample(condition_pool: np.array, models: List, num_samples: int = 1):
     """
     A sampler that returns selected samples for independent variables
     for which the models disagree the most in terms of their predictions.
@@ -17,10 +17,10 @@ def model_disagreement_sample(X: np.array, models: List, num_samples: int = 1):
     Returns: Sampled pool
     """
 
-    if isinstance(X, Iterable):
-        X = np.array(list(X))
+    if isinstance(condition_pool, Iterable):
+        condition_pool = np.array(list(condition_pool))
 
-    X_predict = np.array(X)
+    X_predict = np.array(condition_pool)
     if len(X_predict.shape) == 1:
         X_predict = X_predict.reshape(-1, 1)
 
