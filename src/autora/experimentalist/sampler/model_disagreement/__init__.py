@@ -63,6 +63,6 @@ def model_disagreement_sample(condition_pool: np.array, models: List, num_sample
     # sort the summed disagreements and select the top n
     idx = (-summed_disagreement).argsort()[:num_samples]
 
-    return X[idx]
+    return condition_pool[idx]
 
 model_disagreement_sampler = deprecated_alias(model_disagreement_sample, "model_disagreement_sampler")
