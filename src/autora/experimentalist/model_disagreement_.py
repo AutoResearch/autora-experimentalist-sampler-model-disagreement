@@ -1,11 +1,12 @@
 import itertools
-from functools import singledispatch
-from typing import List, Union, Dict, Iterable
+from typing import Dict, Iterable, List, Union
+
 import numpy as np
 import pandas as pd
+from sklearn.base import BaseEstimator
+
 from autora.state.delta import Result, State, wrap_to_use_state
 
-from sklearn.base import BaseEstimator
 
 def model_disagreement_sample(s: State, **kwargs) -> State:
     """Wrapper on [model_disagreement_sample_on_conditions][] which uses the `State` mechanism."""
@@ -15,7 +16,7 @@ def model_disagreement_sample(s: State, **kwargs) -> State:
 def model_disagreement_sample_on_conditions(
     conditions: Union[pd.DataFrame, Iterable, Dict, np.ndarray, np.recarray],
     models: List[BaseEstimator],
-    num_samples: int = 1
+    num_samples: int = 1,
 ):
     """
     A sampler that returns selected samples for independent variables
@@ -225,4 +226,3 @@ def model_disagreement_sample_on_conditions(
     idx = (-summed_disagreement).argsort()[:num_samples]
 
     return Result(conditions=conditions_.loc[idx])
-

@@ -1,22 +1,27 @@
 from autora.experimentalist.sampler.model_disagreement import model_disagreement_sample
-from autora.theorist.bms import BMSRegressor; BMSRegressor()
-from autora.theorist.darts import DARTSRegressor; DARTSRegressor()
+from autora.theorist.bms import BMSRegressor
+
+BMSRegressor()
+from autora.theorist.darts import DARTSRegressor
+
+DARTSRegressor()
 import numpy as np
 
+
 def test_output_dimensions():
-    #Meta-Setup
+    # Meta-Setup
     X = np.linspace(start=-3, stop=6, num=10).reshape(-1, 1)
     y = (X**2).reshape(-1, 1)
     n = 5
-    
-    #Theorists
+
+    # Theorists
     bms_theorist = BMSRegressor()
     darts_theorist = DARTSRegressor()
-    
-    bms_theorist.fit(X,y)
-    darts_theorist.fit(X,y)
 
-    #Sampler
+    bms_theorist.fit(X, y)
+    darts_theorist.fit(X, y)
+
+    # Sampler
     X_new = model_disagreement_sample(X, [bms_theorist, darts_theorist], n)
 
     # Check that the sampler returns n experiment conditions
